@@ -5,7 +5,7 @@ void main(){
     var pin = 'kasir123';
     var ceklogin = true;
 
-login(){
+void login(){
     stdout.writeln('Masukkan password anda:');
     var inputpassword = stdin.readLineSync();
 
@@ -17,7 +17,7 @@ login(){
 }
 
 
-tampilmenu(){
+void tampilmenu(){
     print('=========================');
     print('    KASIR MINIMARKET');
     print('=========================');
@@ -35,7 +35,7 @@ List<Map<String, dynamic>> daftarbarang = [
     {'nama': 'Susu Ultra', 'stok': 15, 'harga': 10000},
 ];
 
-cekstok(){
+void cekstok(){
     print('Daftar Barang:');
     for (var i = 0; i < daftarbarang.length; i++) {
         var barang = daftarbarang[i];
@@ -43,7 +43,7 @@ cekstok(){
     }
 }
 
-restock(){
+void restock(){
     stdout.writeln('Pilih angka barang yang ingin di restock');
     var pilihanbarang = int.parse(stdin.readLineSync()!);
     if (pilihanbarang == 1){
@@ -71,7 +71,7 @@ restock(){
     }
 }
 
-transaksi(){
+void transaksi(){
     stdout.writeln('Pilih barang yang ingin ditransaksikan:');
     var pilihanbarang = int.parse(stdin.readLineSync()!);
     if (pilihanbarang == 1){
@@ -115,7 +115,7 @@ transaksi(){
     }
 }
 
-keluar(){
+void keluar(){
     exit(0);
 }
 
